@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 
 namespace Messenger.Models
 {
@@ -18,6 +19,7 @@ namespace Messenger.Models
             {
                 Login = "admin",
                 Password = "admin",
+                CreationDate = DateTime.Now,
                 Role = admin
             });
             base.Seed(db);

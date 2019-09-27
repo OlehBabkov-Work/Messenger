@@ -1,4 +1,6 @@
-﻿namespace Messenger.Models
+﻿using System;
+
+namespace Messenger.Models
 {
     /// <summary>
     /// 27.09.2019 : Class created
@@ -8,6 +10,7 @@
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public DateTime CreationDate { get; set; }
         public int RoleId { get; set; }
         public Role Role { get; set; }
     }

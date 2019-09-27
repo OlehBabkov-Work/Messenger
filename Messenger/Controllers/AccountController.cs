@@ -49,7 +49,7 @@ namespace Messenger.Controllers
                 User user = db.Users.FirstOrDefault(u => u.Login == model.Name && u.Password == model.Password);
                 if (user == null)
                 {
-                    db.Users.Add(new User { Login = model.Name, Password = model.Password, RoleId = 2 });
+                    db.Users.Add(new User { Login = model.Name, Password = model.Password, CreationDate = DateTime.Now, RoleId = 2 });
                     db.SaveChanges();
                     user = db.Users.Where(u => u.Login == model.Name && u.Password == model.Password).FirstOrDefault();
                     if (user != null)
